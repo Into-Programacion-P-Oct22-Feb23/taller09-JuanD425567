@@ -29,12 +29,25 @@ public class Ejercicio05 {
         String inicial;
         char inicialLetra;
         boolean bandera = true;
+        
         while (bandera) {
             System.out.println("Ingrese una letra");
             inicial = entrada.nextLine();
-            
+            for (int i = 0; i < estudiantes.length; i++) {
+                inicialLetra=estudiantes[i].charAt(0);
+                String inicial2=String.valueOf(inicialLetra);
+                if (inicial.equals(inicial2)) {
+                    bandera=false;
+                }
+                
+            }
         }
 
     }
 
 }
+//creamos un ciclo repetitivo for donde comparamos el valor de i con estudiantes.length
+// le asignamos el valor de estudiantes[i].charAt a inicialLetra, inicializamos
+//la variable inicial2 y le damos el valor de ValueOF que tiene InicialLetra
+//luego en otro if comparamos el char de inicial2 y si cumple la condicion
+//bandera pasa a ser Falsa, saliendo asi del ciclo repetitivo.
